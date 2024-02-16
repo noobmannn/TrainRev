@@ -6,16 +6,20 @@ Phân tích cơ bản các thành phần của một file PE32 gồm:
 - PE Header: Signature, File Header, Optional Header
 - Section Table
 
+Phân tích chi tiết cấu trúc một file PE cơ bản có thể tham khảo ở [đây](https://hackmd.io/@noobmannn/BkSHjNnsp)
+
 ### Code
 
-[peparser.c](https://github.com/noobmannn/TrainRev/blob/365cffe418209cc9ff0daf1084ef86bf53d10935/PE%20Parser/Src/peparser.c)
+[peparser.c](https://github.com/noobmannn/TrainRev/blob/85047678642a136b087522f53f896f0042a09498/PE%20Parser/Src/peparser.c)
 
-[peparser.exe](https://github.com/noobmannn/TrainRev/blob/365cffe418209cc9ff0daf1084ef86bf53d10935/PE%20Parser/Src/peparser.exe)
+[peparser.exe](https://github.com/noobmannn/TrainRev/blob/85047678642a136b087522f53f896f0042a09498/PE%20Parser/Src/peparser.exe)
 
 ### Demo
 
 ```
-C:\Users\Dell\Downloads\PE Parser>peparser.exe C:\Users\Dell\Downloads\vmcode.exe
+C:\Users\Dell>C:\Users\Dell\Downloads\PE_Parser\peparser.exe C:\Users\Dell\Downloads\vmcode.exe
+This is a PE32 file.
+
 ******* DOS HEADER *******
         0x5a4d          Magic number
         0x90            Bytes on last page of file
